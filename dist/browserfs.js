@@ -7260,7 +7260,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            appendPath(filePath);
 	            break;
 	        default:
-	            break;
+	            throw new Error("Unknown operation requested " + kind);
 	    }
 	    var req = fetch(constructedFullApiUrl.join("/") + (search.length > 0 ? ("?" + (search.map(function (x) { return ((x.key) + "=" + (x.value)); }).join("&"))) : ""), {
 	        method: targetMethod,
